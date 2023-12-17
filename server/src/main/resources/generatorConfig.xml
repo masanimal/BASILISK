@@ -4,9 +4,7 @@
   "http://mybatis.org/dtd/mybatis-generator-config_1_0.dtd">
 
 <generatorConfiguration>
-
-  <classPathEntry location="lib/h2-1.4.200.jar"/>
-
+ 
   <context id="simple" targetRuntime="MyBatis3">
 
     <commentGenerator>
@@ -14,9 +12,9 @@
     </commentGenerator>
 
     <jdbcConnection driverClass="com.mysql.cj.jdbc.Driver"
-      connectionURL="jdbc:mysql://localhost:3306/repcornb"
-      userId="hoge1"
-      password="hoge1">
+      connectionURL="jdbc:mysql://localhost:3306/repcorn"
+      userId="hoge"
+      password="hoge">
     </jdbcConnection>
 
     <javaModelGenerator targetPackage="com.yamamoto.yuta.andres.infrastructure.repository.entity"
@@ -29,8 +27,6 @@
       targetPackage="com.yamamoto.yuta.andres.infrastructure.repository.mapper"
       targetProject="../back/src/gen/java"/>
 
-    <table tableName="SAMPLE"/>
-    <table tableName="MASTER"/>
-
+    <table tableName="book"/>
   </context>
 </generatorConfiguration>
